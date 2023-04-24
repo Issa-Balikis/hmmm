@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,500&display=swap');
+
+/* || RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* ||VARIABLES */
+
+:root {
+    /* FONT */
+    --FF: 'Nunito', sans-serif;
+    --FS: clamp(1rem, 2.2vh, 1.5rem);
+    --FS-HEADING: 2.5rem;
+
+    /* COLORS */
+    --BG-COLOR: wheat;
+    --bg-color-header: white;
+    --LINK-COLOR: black;
+    --LINK-HOVER: gray;
+    --LINK-ACTIVE: green;
+}
+
+/* || GENERAL STYLES */
+
+html {
+    font-family: var(--FF);
+    font-size: var(--FS);
+  /*   overflow-x: hidden; */
+    white-space: wrap;
+   /*  max-width: 100%;
+    overflow: hidden; */
+}
+
+header {
+    width: 1349px;
+}
+
+section {
+    border: 1px solid black;
+    height: 30px;
+    background-color: var(--BG-COLOR);
+} 
+ h2 {
+    position: relative;
+    left: -200px ;
+    margin-top: 4px;
+    font-size: 35px;
+} 
+.social {
+    top: 2px;
+    font-size: 20px;
+    letter-spacing: 8px;
+    float: right;
+}  
+
+.social:hover
+.icon:first-child {
+    color: #13137a;
+}
+
+.social:hover
+.icon:nth-child(2) {
+    color: orange;
+    transform: scale(1.3);
+    transition: .4s;
+}
+
+.social:hover
+.icon:last-child 
+i {
+   color: #1da1f2;
+}
+
+.fa-brands:hover {
+    transform: scale(1.3);
+    transition: .4s;
+}
+
+nav { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+ ul li {
+    list-style-type: none;
+    display: inline-block;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+a:any-link {
+    color: var(--LINK-COLOR);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    border-bottom: 4px solid orangered;
+    transition: .2s;
+}
+
+a:active {
+    color: var(--LINK-ACTIVE);
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.sub__shop {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px transparent;
+}
+
+.dropdown:hover
+.sub__shop {
+    display: block;
+    background-color: wheat;
+}
+
+.sub__shop a{
+    display: block;
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.dropdown:hover, 
+.sub__shop, li {
+    width: 110px;
+    padding: 1px;
+    margin-left: -10px;
+    border-bottom: 1px solid #fff;
+    text-align: left;
+}
+
+.dropdown:hover,
+.sub__shop,
+li:last-child { 
+    border-bottom: none;
+}
+
+.menu-bar {
+    top: 2.5rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.menu-bar .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+/* @media screen (max-width: 576px) {
+   
+
+    .menu-bar {
+        display: flex;
+    }
+
+    .nav-bar {
+        display: none;
+       width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul { 
+        width: 100%;
+        flex-direction: column;
+    }
+
+    li {
+        text-align: center;
+    }
+}
+ */
+
+
+   
+/* .menu-icon::before {
+    transform: translate(-20px, -12px);
+}
+.menu-icon::after {
+    transform: translate(-20px, 12px);
+}
+
+nav {
+    display: block;
+    transform-origin: top center;
+} */
+
+/* form, input {
+    padding: 10px;
+    margin: 5px;
+}
+ */
+input {
+    border: 2px solid gray;
+    border-radius: 20px;
+    width: 150px;
+    height: 25px;
+    
+}
+
+/* button {
+    text-indent: -999px;
+    overflow: hidden;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: transparent;
+    cursor: pointer;
+    opacity: 0.7;
+} */
+
+.search {
+    /* float: right; */
+    white-space: nowrap;
+}
+
+.search button {
+    background-color: transparent;
+    border-color: gray;
+    color: black;
+    float: right;
+    padding: 5px 10px;
+    margin-right: 16px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+.search
+button:hover {
+    color: gray;
+}
+
+.fa-cart-shopping:hover {
+    color: orangered;
+    cursor: pointer;
+}
+
+.cover img {
+    background-size: cover;
+    height: 600px;
+    width: 1349px;
+}
+
+.text {
+    position: absolute;
+    top: 35%;
+    left: 2%;
+    color: orangered;
+}
+
+h1 {
+    font-size: 70px;
+    text-transform: capitalize;
+    width: 700px;
+    font-weight: normal;
+    line-height: 72px;
+    animation: slide 4s ease-in-out 1s infinite normal forwards;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(-200px) skew(1.2);
+    }
+
+    66% {
+        transform: translateX(600px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+h4 {
+    position: absolute;
+    color: white;
+    top: -30%;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.btn {
+    position: absolute;
+    text-transform: uppercase;
+    border: none;
+    color: black;
+    background-color: wheat;
+    padding: 10px;
+    margin: 10px;
+    left: 40px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: bisque;
+}
+
+.bag {
+    position: absolute;
+    left: 80px;
+    margin-top: -30px;
+    border: 2px solid darkgray;
+    box-shadow: 1px 2px 4px;
+    background: none;
+}
+
+figcaption {
+    color: black;
+    position: absolute;
+    left: 15%;
+    top: 35%;
+    border: 1px solid transparent;
+    width: 235px;
+    font-size: 43px;
+    background-color: wheat;
+    font-weight: normal;
+    text-align: center;
+}
+
+.bag:hover {
+    box-shadow: 1px 3px 9px;
+}
+
+.clothing {
+    position: absolute;
+    left: 500px;
+    margin-top: -30px;
+    border: 2px solid darkgray;
+    box-shadow: 1px 2px 4px;
+}
+
+.clothing:hover {
+    box-shadow: 1px 3px 9px;
+}
+
+.accessories {
+    position: absolute;
+    left: 950px;
+    margin-top: -30px;
+    border: 2px solid darkgray;
+    box-shadow: 1px 2px 4px;
+}
+
+.accessories:hover {
+    box-shadow: 1px 3px 9px;
+}
